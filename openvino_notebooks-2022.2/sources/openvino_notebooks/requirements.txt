@@ -6,8 +6,8 @@ ipython>=7.16.3
 
 # openvino and its dependencies
 openvino-dev==2022.3.0
-# openvino-telemetry==2022.3.0
-# nncf==2.4.0
+openvino-telemetry==2022.3.0
+nncf==2.4.0
 
 
 # # deep learning frameworks

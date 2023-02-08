@@ -39,7 +39,7 @@ sudo docker exec -it tidy-openvino_notebooks-2022.2 /bin/bash
 # install
 ```
 cd /root/openvino_notebooks/sources/openvino_notebooks
-pip3 install -r requirements.txt
+pip install --upgrade -r requirements.txt
 
 cd /root/openvino_notebooks
 nohup jupyter notebook --ip=0.0.0.0 --allow-root --port 6000 &
