@@ -20,7 +20,7 @@ sudo docker run -itd  \
 --ipc=host \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 -e DISPLAY=$DISPLAY \
--v /data/home/baseuser/tidy-workspace/tidy-openvino_notebooks/openvino_notebooks-2022.2:/root/openvino_notebooks \
+-v /data/home/baseuser/tidy-neuralnetwork/tidy-openvino_notebooks/openvino_notebooks-2022.2:/root/openvino_notebooks \
 -w /root/openvino_notebooks nvcr.io/nvidia/pytorch:22.12-py3
 
 
@@ -39,7 +39,8 @@ sudo docker exec -it tidy-openvino_notebooks-2022.2 /bin/bash
 # install
 ```
 cd /root/openvino_notebooks/sources/openvino_notebooks
-pip install --upgrade -r requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
 
 cd /root/openvino_notebooks
 nohup jupyter notebook --ip=0.0.0.0 --allow-root --port 6000 &
@@ -48,5 +49,11 @@ http://localhost:9802/tree
 
 ```
 
+# docker commit
+```
 
+sudo docker commit 6fc791ad5348 10.9.36.17:5000/tidy-neuralnetwork/tidy-openvino_notebook:2022.2
+sudo docker push 10.9.36.17:5000/tidy-neuralnetwork/tidy-openvino_notebook:2022.2
+
+```
 
